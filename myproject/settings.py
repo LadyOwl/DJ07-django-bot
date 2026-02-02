@@ -1,5 +1,3 @@
-# myproject/settings.py
-
 import os
 from pathlib import Path
 
@@ -18,7 +16,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
-    'main',
     'bot',
 ]
 
@@ -75,9 +72,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = 'main.CustomUser'
 
-# Django REST Framework
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
@@ -87,7 +82,6 @@ REST_FRAMEWORK = {
     ],
 }
 
-# CORS
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:8000",
     "http://localhost:8000",
